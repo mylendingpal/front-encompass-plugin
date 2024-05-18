@@ -5,5 +5,15 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default defineConfig({
-    plugins: [react()],
+  plugins: [react()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://api.elliemae.com',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  }
 });
