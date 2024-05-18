@@ -1,0 +1,12 @@
+{
+  "manifest_version": 1,
+  "name": "Encompass Loan Search",
+  "description": "Search and retrieve loan data from Encompass",
+  "icon": "icon.png",
+  "auth": {
+    "type": "none"
+  },
+  "frontend": {
+    "entrypoint": "index.html"
+  }
+}
